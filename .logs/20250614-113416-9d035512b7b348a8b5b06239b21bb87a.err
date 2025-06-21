@@ -1,0 +1,65 @@
+ ⨯ ./app/products/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/home/ubuntu/pharmacy_purchase_order/app/app/products/page.tsx[0m:220:1]
+ [2m220[0m |   };
+ [2m221[0m | 
+ [2m222[0m |   return (
+ [2m223[0m |     <div className="space-y-8">
+     : [31;1m     ^^^[0m
+ [2m224[0m |       <motion.div
+ [2m225[0m |         initial={{ opacity: 0, y: 20 }}
+ [2m226[0m |         animate={{ opacity: 1, y: 0 }}
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/products/page.tsx
+ ⨯ ./app/products/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/home/ubuntu/pharmacy_purchase_order/app/app/products/page.tsx[0m:220:1]
+ [2m220[0m |   };
+ [2m221[0m | 
+ [2m222[0m |   return (
+ [2m223[0m |     <div className="space-y-8">
+     : [31;1m     ^^^[0m
+ [2m224[0m |       <motion.div
+ [2m225[0m |         initial={{ opacity: 0, y: 20 }}
+ [2m226[0m |         animate={{ opacity: 1, y: 0 }}
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/products/page.tsx
+ ⨯ ./app/products/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4m/home/ubuntu/pharmacy_purchase_order/app/app/products/page.tsx[0m:220:1]
+ [2m220[0m |   };
+ [2m221[0m | 
+ [2m222[0m |   return (
+ [2m223[0m |     <div className="space-y-8">
+     : [31;1m     ^^^[0m
+ [2m224[0m |       <motion.div
+ [2m225[0m |         initial={{ opacity: 0, y: 20 }}
+ [2m226[0m |         animate={{ opacity: 1, y: 0 }}
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/products/page.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+error Command failed with signal "SIGTERM".

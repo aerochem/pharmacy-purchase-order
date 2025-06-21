@@ -1,0 +1,56 @@
+yarn run v1.22.22
+$ next dev
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 3.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 6.8s (1181 modules)
+ GET / 200 in 7270ms
+ ✓ Compiled in 522ms (593 modules)
+ GET / 200 in 104ms
+ ○ Compiling /api/dashboard ...
+ ✓ Compiled /api/dashboard in 2.8s (1342 modules)
+ GET /suppliers 404 in 3220ms
+ GET /products 404 in 3216ms
+ GET /purchase-orders/new 200 in 3245ms
+ GET /api/dashboard 200 in 3061ms
+ GET /api/dashboard 200 in 24ms
+ ✓ Compiled /api/products in 146ms (689 modules)
+ ✓ Compiled (691 modules)
+ GET /api/products 200 in 408ms
+ GET /api/suppliers 200 in 426ms
+ GET /api/products 200 in 17ms
+ GET /api/suppliers 200 in 15ms
+ GET /products 404 in 34ms
+ GET /suppliers 404 in 36ms
+ GET / 200 in 79ms
+ GET /purchase-orders/new 200 in 81ms
+ ✓ Compiled /api/seed in 153ms (696 modules)
+Database seeded successfully!
+Created 5 suppliers and 12 products
+ POST /api/seed 200 in 285ms
+ GET / 200 in 63ms
+ GET /api/dashboard 200 in 119ms
+ GET /api/dashboard 200 in 20ms
+ GET /purchase-orders/new 200 in 45ms
+ GET /api/products 200 in 126ms
+ GET /api/suppliers 200 in 135ms
+ GET /api/products 200 in 16ms
+ GET /api/suppliers 200 in 16ms
+ GET /api/suppliers 200 in 16ms
+ GET /api/products 200 in 18ms
+ ✓ Compiled in 363ms (1351 modules)
+ ✓ Compiled in 293ms (665 modules)
+ ✓ Compiled in 242ms (665 modules)
+ ✓ Compiled in 250ms (665 modules)
+[?25h

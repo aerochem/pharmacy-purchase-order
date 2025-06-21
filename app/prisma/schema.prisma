@@ -1,0 +1,150 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Supplier {
+  id            String   @id @default(cuid())
+  name          String
+  contactPerson String?
+  email         String?
+  phone         String?
+  address       String?
+  gstNumber     String?
+  paymentTerms  String?
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  purchaseOrders PurchaseOrder[]
+
+  @@map("suppliers")
+}
+
+enum DrugCategory {
+  TABLET
+  CAPSULE
+  SYRUP
+  INJECTION
+  OINTMENT
+  DROPS
+  INHALER
+  POWDER
+  CREAM
+  GEL
+}
+
+enum GSTRate {
+  GST_5
+  GST_12
+  GST_18
+}
+
+enum ProductStatus {
+  NORMAL
+  LOW_STOCK
+  OUT_OF_STOCK
+}
+
+model Product {
+  id           String        @id @default(cuid())
+  name         String
+  genericName  String?
+  composition  String
+  category     DrugCategory
+  manufacturer String?
+  batchNumber  String?
+  expiryDate   DateTime?
+  unitPrice    Float
+  gstRate      GSTRate       @default(GST_12)
+  hsnCode      String?
+  currentStock Int           @default(0)
+  minStockLevel Int          @default(10)
+  maxStockLevel Int          @default(1000)
+  status       ProductStatus @default(NORMAL)
+  isActive     Boolean       @default(true)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  purchaseOrderItems PurchaseOrderItem[]
+  inventoryMovements InventoryMovement[]
+
+  @@map("products")
+}
+
+enum MovementType {
+  PURCHASE
+  SALE
+  ADJUSTMENT
+  RETURN
+  EXPIRED
+}
+
+model InventoryMovement {
+  id          String       @id @default(cuid())
+  productId   String
+  type        MovementType
+  quantity    Int
+  reference   String?
+  notes       String?
+  createdAt   DateTime     @default(now())
+  createdBy   String?
+
+  product Product @relation(fields: [productId], references: [id])
+
+  @@map("inventory_movements")
+}
+
+enum PurchaseOrderStatus {
+  DRAFT
+  SUBMITTED
+  APPROVED
+  REJECTED
+  COMPLETED
+  CANCELLED
+}
+
+model PurchaseOrder {
+  id              String              @id @default(cuid())
+  orderNumber     String              @unique
+  supplierId      String
+  status          PurchaseOrderStatus @default(DRAFT)
+  orderDate       DateTime            @default(now())
+  expectedDate    DateTime?
+  paymentTerms    String?
+  comments        String?
+  shippingAddress String              @default("SHED NO. D-99, BLOCK NO. 351 PAIKI 1, TULSI ESTATE AND PLAZA, CHANGODAR - 382220, TALUKA: SANAND, DISTRICT: AHMEDABAD-RURAL")
+  subtotal        Float               @default(0)
+  totalGst        Float               @default(0)
+  totalAmount     Float               @default(0)
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  supplier Supplier            @relation(fields: [supplierId], references: [id])
+  items    PurchaseOrderItem[]
+
+  @@map("purchase_orders")
+}
+
+model PurchaseOrderItem {
+  id               String  @id @default(cuid())
+  purchaseOrderId  String
+  productId        String
+  quantity         Int
+  unitPrice        Float
+  gstRate          GSTRate
+  gstAmount        Float
+  totalAmount      Float
+  notes            String?
+
+  purchaseOrder PurchaseOrder @relation(fields: [purchaseOrderId], references: [id], onDelete: Cascade)
+  product       Product       @relation(fields: [productId], references: [id])
+
+  @@map("purchase_order_items")
+}

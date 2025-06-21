@@ -1,0 +1,176 @@
+sending incremental file list
+components.json
+next-env.d.ts
+next.config.js
+package.json
+postcss.config.js
+tailwind.config.ts
+tsconfig.json
+app/
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/analytics/
+app/analytics/page.tsx
+app/api/
+app/api/analytics/
+app/api/analytics/route.ts
+app/api/dashboard/
+app/api/dashboard/route.ts
+app/api/inventory/
+app/api/inventory/route.ts
+app/api/inventory/low-stock/
+app/api/inventory/low-stock/route.ts
+app/api/products/
+app/api/products/route.ts
+app/api/products/[id]/
+app/api/products/[id]/route.ts
+app/api/purchase-orders/
+app/api/purchase-orders/route.ts
+app/api/purchase-orders/[id]/
+app/api/purchase-orders/[id]/route.ts
+app/api/purchase-orders/pdf/
+app/api/purchase-orders/pdf/route.ts
+app/api/seed/
+app/api/seed/route.ts
+app/api/suppliers/
+app/api/suppliers/route.ts
+app/api/suppliers/[id]/
+app/api/suppliers/[id]/route.ts
+app/inventory/
+app/inventory/page.tsx
+app/products/
+app/products/page.tsx
+app/purchase-orders/
+app/purchase-orders/page.tsx
+app/purchase-orders/[id]/
+app/purchase-orders/[id]/edit/
+app/purchase-orders/[id]/edit/page.tsx
+app/purchase-orders/[id]/view/
+app/purchase-orders/[id]/view/page.tsx
+app/purchase-orders/new/
+app/purchase-orders/new/page.tsx
+app/suppliers/
+app/suppliers/page.tsx
+components/
+components/theme-provider.tsx
+components/ui/
+components/ui/accordion.tsx
+components/ui/alert-dialog.tsx
+components/ui/alert.tsx
+components/ui/aspect-ratio.tsx
+components/ui/avatar.tsx
+components/ui/badge.tsx
+components/ui/breadcrumb.tsx
+components/ui/button.tsx
+components/ui/calendar.tsx
+components/ui/card.tsx
+components/ui/carousel.tsx
+components/ui/checkbox.tsx
+components/ui/collapsible.tsx
+components/ui/command.tsx
+components/ui/context-menu.tsx
+components/ui/date-range-picker.tsx
+components/ui/dialog.tsx
+components/ui/drawer.tsx
+components/ui/dropdown-menu.tsx
+components/ui/form.tsx
+components/ui/hover-card.tsx
+components/ui/input-otp.tsx
+components/ui/input.tsx
+components/ui/label.tsx
+components/ui/menubar.tsx
+components/ui/navigation-menu.tsx
+components/ui/pagination.tsx
+components/ui/popover.tsx
+components/ui/progress.tsx
+components/ui/radio-group.tsx
+components/ui/resizable.tsx
+components/ui/scroll-area.tsx
+components/ui/select.tsx
+components/ui/separator.tsx
+components/ui/sheet.tsx
+components/ui/skeleton.tsx
+components/ui/slider.tsx
+components/ui/sonner.tsx
+components/ui/switch.tsx
+components/ui/table.tsx
+components/ui/tabs.tsx
+components/ui/task-card.tsx
+components/ui/textarea.tsx
+components/ui/toast.tsx
+components/ui/toaster.tsx
+components/ui/toggle-group.tsx
+components/ui/toggle.tsx
+components/ui/tooltip.tsx
+components/ui/use-toast.ts
+hooks/
+hooks/use-toast.ts
+lib/
+lib/db.ts
+lib/seed.ts
+lib/types.ts
+lib/utils.ts
+lib/db/
+prisma/
+prisma/schema.prisma
+
+sent 367,620 bytes  received 1,814 bytes  246,289.33 bytes/sec
+total size is 360,817  speedup is 0.98
+yarn run v1.22.22
+$ next build
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.28
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Skipping linting
+   Checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+ ✓ Generating static pages (10/10)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    6.59 kB         143 kB
+├ ○ /_not-found                          876 B          88.3 kB
+├ ○ /analytics                           6.83 kB         159 kB
+├ ƒ /api/analytics                       0 B                0 B
+├ ƒ /api/dashboard                       0 B                0 B
+├ ƒ /api/inventory                       0 B                0 B
+├ ƒ /api/inventory/low-stock             0 B                0 B
+├ ƒ /api/products                        0 B                0 B
+├ ƒ /api/products/[id]                   0 B                0 B
+├ ƒ /api/purchase-orders                 0 B                0 B
+├ ƒ /api/purchase-orders/[id]            0 B                0 B
+├ ƒ /api/purchase-orders/pdf             0 B                0 B
+├ ƒ /api/seed                            0 B                0 B
+├ ƒ /api/suppliers                       0 B                0 B
+├ ƒ /api/suppliers/[id]                  0 B                0 B
+├ ○ /inventory                           4.39 kB         160 kB
+├ ○ /products                            4.68 kB         164 kB
+├ ○ /purchase-orders                     3.39 kB         168 kB
+├ ƒ /purchase-orders/[id]/edit           5.02 kB         170 kB
+├ ƒ /purchase-orders/[id]/view           6.41 kB         143 kB
+├ ○ /purchase-orders/new                 4.85 kB         161 kB
+└ ○ /suppliers                           3.97 kB         163 kB
++ First Load JS shared by all            87.4 kB
+  ├ chunks/117-2944b53e6d4b4c52.js       31.8 kB
+  ├ chunks/fd9d1056-9aca97ab67458473.js  53.6 kB
+  └ other shared chunks (total)          2.04 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+Done in 44.45s.

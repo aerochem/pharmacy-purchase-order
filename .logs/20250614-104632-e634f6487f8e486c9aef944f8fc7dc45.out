@@ -1,0 +1,80 @@
+yarn run v1.22.22
+$ next dev
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 5s (1193 modules)
+ GET / 200 in 5426ms
+ ✓ Compiled in 522ms (599 modules)
+ ○ Compiling /purchase-orders ...
+ ✓ Compiled /purchase-orders in 4.7s (2684 modules)
+ GET / 200 in 5013ms
+ GET /suppliers 200 in 5008ms
+ GET /products 200 in 5007ms
+ GET /inventory 200 in 5006ms
+ GET /analytics 200 in 5006ms
+ GET /purchase-orders 200 in 5004ms
+ GET /purchase-orders/new 200 in 5027ms
+ ✓ Compiled /api/inventory in 473ms (1379 modules)
+ ✓ Compiled (1391 modules)
+ GET /api/purchase-orders 200 in 1176ms
+ GET /api/inventory/low-stock 200 in 1252ms
+ GET /api/suppliers 200 in 1098ms
+ GET /api/inventory?category=all&stockStatus=all&search= 200 in 1100ms
+ GET /api/products 200 in 1239ms
+ GET /api/suppliers 200 in 1219ms
+ GET /api/dashboard 200 in 1283ms
+ GET /api/products 200 in 1138ms
+ GET /api/purchase-orders 200 in 51ms
+ GET /api/analytics 200 in 1343ms
+ GET /api/inventory/low-stock 200 in 77ms
+ GET /api/suppliers 200 in 99ms
+ GET /api/suppliers 200 in 75ms
+ GET /api/inventory?category=all&stockStatus=all&search= 200 in 124ms
+ GET /api/products 200 in 150ms
+ GET /api/products 200 in 133ms
+ GET /api/dashboard 200 in 150ms
+ GET /api/analytics 200 in 162ms
+ ○ Compiling /purchase-orders/[id]/view ...
+ ✓ Compiled /purchase-orders/[id]/view in 1093ms (2745 modules)
+ GET /purchase-orders/cmbw3ldgu0002o701wibpj909/view 200 in 1701ms
+ GET /purchase-orders/cmbw3ldgu0002o701wibpj909/edit 200 in 1704ms
+ ✓ Compiled /api/purchase-orders/[id] in 269ms (1404 modules)
+ GET /api/products 200 in 672ms
+ GET /api/suppliers 200 in 676ms
+ GET /api/products 200 in 24ms
+ GET /api/suppliers 200 in 25ms
+ GET /api/purchase-orders/cmbw3ldgu0002o701wibpj909 200 in 1141ms
+ GET /api/purchase-orders/cmbw3ldgu0002o701wibpj909 200 in 1134ms
+ GET /api/purchase-orders/cmbw3ldgu0002o701wibpj909 200 in 37ms
+ GET /api/purchase-orders/cmbw3ldgu0002o701wibpj909 200 in 37ms
+ GET /purchase-orders/new 200 in 187ms
+ GET /inventory 200 in 199ms
+ GET / 200 in 200ms
+ GET /products 200 in 200ms
+ GET /suppliers 200 in 205ms
+ GET /purchase-orders 200 in 204ms
+ GET /analytics 200 in 206ms
+ GET /purchase-orders/cmbw3ldgu0002o701wibpj909/view 200 in 205ms
+ GET /purchase-orders/cmbw3ldgu0002o701wibpj909/edit 200 in 206ms
+ GET / 200 in 46ms
+ GET /api/inventory/low-stock 200 in 139ms
+ GET /api/dashboard 200 in 142ms
+ GET /api/inventory/low-stock 200 in 28ms
+ GET /api/dashboard 200 in 30ms
+ GET /purchase-orders 200 in 33ms
+ GET /api/purchase-orders 200 in 105ms
+ GET /api/suppliers 200 in 19ms
+ GET /api/products 200 in 19ms
+ POST /api/purchase-orders 500 in 26ms
+ POST /api/purchase-orders/new-test 405 in 29ms
+ GET /purchase-orders/new 200 in 36ms
+ ✓ Compiled /api/purchase-orders/pdf in 424ms (1362 modules)
+[?25h
+Done in 232.60s.

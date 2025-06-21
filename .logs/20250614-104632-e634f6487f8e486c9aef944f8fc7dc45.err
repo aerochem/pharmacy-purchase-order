@@ -1,0 +1,88 @@
+Error creating purchase order: PrismaClientValidationError: 
+Invalid `prisma.purchaseOrder.create()` invocation in
+/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/purchase-orders/route.js:142:58
+
+  139 async function POST(request) {
+  140     try {
+  141         const body = await request.json();
+→ 142         const purchaseOrder = await prisma.purchaseOrder.create({
+                data: {
+                  supplierId: "cmbw4431z0000wne8i9tq4g67",
+                  status: "SUBMITTED",
+                  orderDate: new Date("2025-06-14T10:47:22.487Z"),
+                  expectedDate: new Date("2025-06-21T10:47:22.487Z"),
+                  paymentTerms: "Net 30 Days",
+                  comments: "Urgent order for high-demand medicines. Please ensure quality packaging.",
+                  subtotal: undefined,
+                  totalGst: undefined,
+                  totalAmount: undefined,
+                  items: {
+                    create: [
+                      {
+                        productId: "cmbw443220005wne8s7ke8owr",
+                        quantity: 100,
+                        unitPrice: 2.5,
+                        gstRate: "GST_12",
+                        gstAmount: undefined,
+                        totalAmount: undefined,
+                        notes: "High priority item"
+                      },
+                      {
+                        productId: "cmbw44322000fwne8zxu34m0z",
+                        quantity: 50,
+                        unitPrice: 4.5,
+                        gstRate: "GST_12",
+                        gstAmount: undefined,
+                        totalAmount: undefined,
+                        notes: "For allergy season"
+                      },
+                      {
+                        productId: "cmbw443220008wne8bkuzphx2",
+                        quantity: 10,
+                        unitPrice: 125,
+                        gstRate: "GST_5",
+                        gstAmount: undefined,
+                        totalAmount: undefined,
+                        notes: "Temperature controlled storage required"
+                      }
+                    ]
+                  },
+              +   orderNumber: String
+                },
+                include: {
+                  supplier: true,
+                  items: {
+                    include: {
+                      product: true
+                    }
+                  }
+                }
+              })
+
+Argument `orderNumber` is missing.
+    at kn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at Zn.handleRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at Zn.handleAndLogRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at Zn.request (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async POST (/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/purchase-orders/route.js:142:31)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.9.0'
+}

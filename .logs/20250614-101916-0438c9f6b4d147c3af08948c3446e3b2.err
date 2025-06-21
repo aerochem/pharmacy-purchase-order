@@ -1,0 +1,108 @@
+ ⨯ ./app/analytics/page.tsx
+Error: 
+  [31mx[0m the name `PieChart` is defined multiple times
+    ,-[[36;1;4m/home/ubuntu/pharmacy_purchase_order/app/app/analytics/page.tsx[0m:10:1]
+ [2m10[0m |   Package,
+ [2m11[0m |   Users,
+ [2m12[0m |   Calendar,
+ [2m13[0m |   PieChart,
+    : [31;1m  ^^^^|^^^[0m
+    :       [31;1m`-- [31;1mprevious definition of `PieChart` here[0m[0m
+ [2m14[0m |   BarChart3,
+ [2m15[0m |   Download
+ [2m16[0m | } from 'lucide-react';
+ [2m17[0m | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+ [2m18[0m | import { Button } from '@/components/ui/button';
+ [2m19[0m | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+ [2m20[0m | import { useToast } from '@/hooks/use-toast';
+ [2m21[0m | import { DashboardAnalytics } from '@/lib/types';
+ [2m22[0m | import { formatCurrency } from '@/lib/utils';
+ [2m23[0m | 
+ [2m24[0m | // Dynamic imports for charts
+ [2m25[0m | const ResponsiveContainer = dynamic(() => import('recharts').then(mod => mod.ResponsiveContainer), { ssr: false });
+ [2m26[0m | const LineChart = dynamic(() => import('recharts').then(mod => mod.LineChart), { ssr: false });
+ [2m27[0m | const BarChart = dynamic(() => import('recharts').then(mod => mod.BarChart), { ssr: false });
+ [2m28[0m | const PieChart = dynamic(() => import('recharts').then(mod => mod.PieChart), { ssr: false });
+    : [33;1m      ^^^^|^^^[0m
+    :           [33;1m`-- [33;1m`PieChart` redefined here[0m[0m
+ [2m29[0m | const Line = dynamic(() => import('recharts').then(mod => mod.Line), { ssr: false });
+ [2m30[0m | const Bar = dynamic(() => import('recharts').then(mod => mod.Bar), { ssr: false });
+ [2m31[0m | const Pie = dynamic(() => import('recharts').then(mod => mod.Pie), { ssr: false });
+    `----
+
+Import trace for requested module:
+./app/analytics/page.tsx
+ ⨯ ./app/analytics/page.tsx
+Error: 
+  [31mx[0m the name `PieChart` is defined multiple times
+    ,-[[36;1;4m/home/ubuntu/pharmacy_purchase_order/app/app/analytics/page.tsx[0m:10:1]
+ [2m10[0m |   Package,
+ [2m11[0m |   Users,
+ [2m12[0m |   Calendar,
+ [2m13[0m |   PieChart,
+    : [31;1m  ^^^^|^^^[0m
+    :       [31;1m`-- [31;1mprevious definition of `PieChart` here[0m[0m
+ [2m14[0m |   BarChart3,
+ [2m15[0m |   Download
+ [2m16[0m | } from 'lucide-react';
+ [2m17[0m | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+ [2m18[0m | import { Button } from '@/components/ui/button';
+ [2m19[0m | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+ [2m20[0m | import { useToast } from '@/hooks/use-toast';
+ [2m21[0m | import { DashboardAnalytics } from '@/lib/types';
+ [2m22[0m | import { formatCurrency } from '@/lib/utils';
+ [2m23[0m | 
+ [2m24[0m | // Dynamic imports for charts
+ [2m25[0m | const ResponsiveContainer = dynamic(() => import('recharts').then(mod => mod.ResponsiveContainer), { ssr: false });
+ [2m26[0m | const LineChart = dynamic(() => import('recharts').then(mod => mod.LineChart), { ssr: false });
+ [2m27[0m | const BarChart = dynamic(() => import('recharts').then(mod => mod.BarChart), { ssr: false });
+ [2m28[0m | const PieChart = dynamic(() => import('recharts').then(mod => mod.PieChart), { ssr: false });
+    : [33;1m      ^^^^|^^^[0m
+    :           [33;1m`-- [33;1m`PieChart` redefined here[0m[0m
+ [2m29[0m | const Line = dynamic(() => import('recharts').then(mod => mod.Line), { ssr: false });
+ [2m30[0m | const Bar = dynamic(() => import('recharts').then(mod => mod.Bar), { ssr: false });
+ [2m31[0m | const Pie = dynamic(() => import('recharts').then(mod => mod.Pie), { ssr: false });
+    `----
+
+Import trace for requested module:
+./app/analytics/page.tsx
+ ⨯ ./app/analytics/page.tsx
+Error: 
+  [31mx[0m the name `PieChart` is defined multiple times
+    ,-[[36;1;4m/home/ubuntu/pharmacy_purchase_order/app/app/analytics/page.tsx[0m:10:1]
+ [2m10[0m |   Package,
+ [2m11[0m |   Users,
+ [2m12[0m |   Calendar,
+ [2m13[0m |   PieChart,
+    : [31;1m  ^^^^|^^^[0m
+    :       [31;1m`-- [31;1mprevious definition of `PieChart` here[0m[0m
+ [2m14[0m |   BarChart3,
+ [2m15[0m |   Download
+ [2m16[0m | } from 'lucide-react';
+ [2m17[0m | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+ [2m18[0m | import { Button } from '@/components/ui/button';
+ [2m19[0m | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+ [2m20[0m | import { useToast } from '@/hooks/use-toast';
+ [2m21[0m | import { DashboardAnalytics } from '@/lib/types';
+ [2m22[0m | import { formatCurrency } from '@/lib/utils';
+ [2m23[0m | 
+ [2m24[0m | // Dynamic imports for charts
+ [2m25[0m | const ResponsiveContainer = dynamic(() => import('recharts').then(mod => mod.ResponsiveContainer), { ssr: false });
+ [2m26[0m | const LineChart = dynamic(() => import('recharts').then(mod => mod.LineChart), { ssr: false });
+ [2m27[0m | const BarChart = dynamic(() => import('recharts').then(mod => mod.BarChart), { ssr: false });
+ [2m28[0m | const PieChart = dynamic(() => import('recharts').then(mod => mod.PieChart), { ssr: false });
+    : [33;1m      ^^^^|^^^[0m
+    :           [33;1m`-- [33;1m`PieChart` redefined here[0m[0m
+ [2m29[0m | const Line = dynamic(() => import('recharts').then(mod => mod.Line), { ssr: false });
+ [2m30[0m | const Bar = dynamic(() => import('recharts').then(mod => mod.Bar), { ssr: false });
+ [2m31[0m | const Pie = dynamic(() => import('recharts').then(mod => mod.Pie), { ssr: false });
+    `----
+
+Import trace for requested module:
+./app/analytics/page.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz_' -> '/home/ubuntu/pharmacy_purchase_order/app/.next/cache/webpack/client-development-fallback/0.pack.gz'

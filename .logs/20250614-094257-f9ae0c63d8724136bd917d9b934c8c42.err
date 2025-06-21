@@ -1,0 +1,340 @@
+Error fetching low stock alerts: PrismaClientValidationError: 
+Invalid `prisma.product.findMany()` invocation in
+/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/inventory/low-stock/route.js:115:55
+
+  112 const prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_1__.PrismaClient();
+  113 async function GET() {
+  114     try {
+→ 115         const lowStockProducts = await prisma.product.findMany({
+                where: {
+                  isActive: true,
+                  OR: [
+                    {
+                      currentStock: {
+                        lte: undefined
+                      }
+                    },
+                    {
+                      currentStock: {
+                        equals: 0
+                      }
+                    }
+                  ]
+                },
+                orderBy: [
+                  {
+                    currentStock: "asc"
+                  },
+                  {
+                    name: "asc"
+                  }
+                ]
+              })
+
+Unknown argument `currentStock`. Available options are marked with ?.
+    at kn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at Zn.handleRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at Zn.handleAndLogRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at Zn.request (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async GET (/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/inventory/low-stock/route.js:115:34)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.9.0'
+}
+Error fetching low stock alerts: PrismaClientValidationError: 
+Invalid `prisma.product.findMany()` invocation in
+/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/inventory/low-stock/route.js:115:55
+
+  112 const prisma = new _prisma_client__WEBPACK_IMPORTED_MODULE_1__.PrismaClient();
+  113 async function GET() {
+  114     try {
+→ 115         const lowStockProducts = await prisma.product.findMany({
+                where: {
+                  isActive: true,
+                  OR: [
+                    {
+                      currentStock: {
+                        lte: undefined
+                      }
+                    },
+                    {
+                      currentStock: {
+                        equals: 0
+                      }
+                    }
+                  ]
+                },
+                orderBy: [
+                  {
+                    currentStock: "asc"
+                  },
+                  {
+                    name: "asc"
+                  }
+                ]
+              })
+
+Unknown argument `currentStock`. Available options are marked with ?.
+    at kn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at Zn.handleRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at Zn.handleAndLogRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at Zn.request (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async GET (/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/inventory/low-stock/route.js:115:34)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.9.0'
+}
+Error seeding database: PrismaClientValidationError: 
+Invalid `prisma.product.createMany()` invocation in
+/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/seed/route.js:205:47
+
+  202     ]
+  203 });
+  204 // Seed products
+→ 205 const products = await prisma.product.createMany({
+        data: [
+          {
+            name: "Paracetamol 500mg",
+            genericName: "Acetaminophen",
+            composition: "Paracetamol 500mg",
+            category: "TABLET",
+            manufacturer: "ABC Pharmaceuticals",
+            batchNumber: "PAR001",
+            expiryDate: new Date("2025-12-31T00:00:00.000Z"),
+            unitPrice: 2.5,
+            gstRate: "GST_12",
+            hsnCode: "30049099",
+            currentStock: 150,
+            minStockLevel: 50,
+            maxStockLevel: 500
+          },
+          {
+            name: "Amoxicillin 250mg",
+            genericName: "Amoxicillin",
+            composition: "Amoxicillin Trihydrate 250mg",
+            category: "CAPSULE",
+            manufacturer: "XYZ Pharma",
+            batchNumber: "AMX001",
+            expiryDate: new Date("2025-10-31T00:00:00.000Z"),
+            unitPrice: 8.75,
+            gstRate: "GST_12",
+            hsnCode: "30041000",
+            currentStock: 25,
+            minStockLevel: 30,
+            maxStockLevel: 200
+          },
+          {
+            name: "Cough Syrup 100ml",
+            genericName: "Dextromethorphan",
+            composition: "Dextromethorphan HBr 15mg/5ml",
+            category: "SYRUP",
+            manufacturer: "PQR Medicines",
+            batchNumber: "CSY001",
+            expiryDate: new Date("2025-08-31T00:00:00.000Z"),
+            unitPrice: 45,
+            gstRate: "GST_12",
+            hsnCode: "30049020",
+            currentStock: 80,
+            minStockLevel: 20,
+            maxStockLevel: 150
+          },
+          {
+            name: "Insulin Injection 10ml",
+            genericName: "Human Insulin",
+            composition: "Human Insulin 100 IU/ml",
+            category: "INJECTION",
+            manufacturer: "DEF Biologics",
+            batchNumber: "INS001",
+            expiryDate: new Date("2025-06-30T00:00:00.000Z"),
+            unitPrice: 125,
+            gstRate: "GST_5",
+            hsnCode: "30043100",
+            currentStock: 5,
+            minStockLevel: 10,
+            maxStockLevel: 50
+          },
+          {
+            name: "Antiseptic Cream 30g",
+            genericName: "Povidone Iodine",
+            composition: "Povidone Iodine 5% w/w",
+            category: "CREAM",
+            manufacturer: "GHI Healthcare",
+            batchNumber: "ANT001",
+            expiryDate: new Date("2026-03-31T00:00:00.000Z"),
+            unitPrice: 35.5,
+            gstRate: "GST_18",
+            hsnCode: "30059090",
+            currentStock: 0,
+            minStockLevel: 15,
+            maxStockLevel: 100
+          },
+          {
+            name: "Eye Drops 10ml",
+            genericName: "Chloramphenicol",
+            composition: "Chloramphenicol 0.5% w/v",
+            category: "DROPS",
+            manufacturer: "JKL Ophthalmic",
+            batchNumber: "EYE001",
+            expiryDate: new Date("2025-09-30T00:00:00.000Z"),
+            unitPrice: 28,
+            gstRate: "GST_12",
+            hsnCode: "30042000",
+            currentStock: 45,
+            minStockLevel: 20,
+            maxStockLevel: 100
+          },
+          {
+            name: "Salbutamol Inhaler",
+            genericName: "Salbutamol",
+            composition: "Salbutamol Sulphate 100mcg/dose",
+            category: "INHALER",
+            manufacturer: "MNO Respiratory",
+            batchNumber: "SAL001",
+            expiryDate: new Date("2025-11-30T00:00:00.000Z"),
+            unitPrice: 85,
+            gstRate: "GST_12",
+            hsnCode: "30049030",
+            currentStock: 12,
+            minStockLevel: 15,
+            maxStockLevel: 75
+          },
+          {
+            name: "Vitamin C Tablets",
+            genericName: "Ascorbic Acid",
+            composition: "Ascorbic Acid 500mg",
+            category: "TABLET",
+            manufacturer: "RST Vitamins",
+            batchNumber: "VTC001",
+            expiryDate: new Date("2026-01-31T00:00:00.000Z"),
+            unitPrice: 3.25,
+            gstRate: "GST_12",
+            hsnCode: "30049099",
+            currentStock: 200,
+            minStockLevel: 40,
+            maxStockLevel: 300
+          },
+          {
+            name: "Antacid Gel 170ml",
+            genericName: "Aluminium Hydroxide",
+            composition: "Aluminium Hydroxide 250mg + Magnesium Hydroxide 250mg/5ml",
+            category: "GEL",
+            manufacturer: "UVW Gastro",
+            batchNumber: "ANT002",
+            expiryDate: new Date("2025-07-31T00:00:00.000Z"),
+            unitPrice: 42.75,
+            gstRate: "GST_12",
+            hsnCode: "30049040",
+            currentStock: 35,
+            minStockLevel: 25,
+            maxStockLevel: 120
+          },
+          {
+            name: "Diclofenac Gel 30g",
+            genericName: "Diclofenac Sodium",
+            composition: "Diclofenac Sodium 1% w/w",
+            category: "GEL",
+            manufacturer: "XYZ Topicals",
+            batchNumber: "DIC001",
+            expiryDate: new Date("2025-12-31T00:00:00.000Z"),
+            unitPrice: 55,
+            gstRate: "GST_18",
+            hsnCode: "30049050",
+            currentStock: 18,
+            minStockLevel: 20,
+            maxStockLevel: 80
+          },
+          {
+            name: "Cetirizine 10mg",
+            genericName: "Cetirizine Hydrochloride",
+            composition: "Cetirizine Hydrochloride 10mg",
+            category: "TABLET",
+            manufacturer: "ABC Pharmaceuticals",
+            batchNumber: "CET001",
+            expiryDate: new Date("2025-10-31T00:00:00.000Z"),
+            unitPrice: 4.5,
+            gstRate: "GST_12",
+            hsnCode: "30049099",
+            currentStock: 90,
+            minStockLevel: 30,
+            maxStockLevel: 200
+          },
+          {
+            name: "Omeprazole 20mg",
+            genericName: "Omeprazole",
+            composition: "Omeprazole 20mg",
+            category: "CAPSULE",
+            manufacturer: "PQR Medicines",
+            batchNumber: "OME001",
+            expiryDate: new Date("2025-09-30T00:00:00.000Z"),
+            unitPrice: 6.75,
+            gstRate: "GST_12",
+            hsnCode: "30049060",
+            currentStock: 8,
+            minStockLevel: 25,
+            maxStockLevel: 150
+          }
+        ]
+      })
+
+Unknown argument `currentStock`. Available options are marked with ?.
+    at kn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:32:1363)
+    at Zn.handleRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:7102)
+    at Zn.handleAndLogRequestError (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6784)
+    at Zn.request (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:124:6491)
+    at async l (/home/ubuntu/pharmacy_purchase_order/app/node_modules/.prisma/client/runtime/library.js:133:9778)
+    at async seedDatabase (/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/seed/route.js:205:26)
+    at async POST (/home/ubuntu/pharmacy_purchase_order/app/.next/server/app/api/seed/route.js:113:9)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57228
+    at async eT.execute (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46851)
+    at async eT.handle (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58760)
+    at async doRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1366:42)
+    at async cacheEntry.responseCache.get.routeKind (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1588:28)
+    at async DevServer.renderToResponseWithComponentsImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1496:28)
+    at async DevServer.renderPageComponent (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1924:24)
+    at async DevServer.renderToResponseImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/base-server.js:818:17)
+    at async /home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:178:21)
+    at async handleRequest (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:355:24)
+    at async requestHandlerImpl (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/router-server.js:379:13)
+    at async Server.requestListener (/home/ubuntu/pharmacy_purchase_order/app/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  clientVersion: '6.9.0'
+}

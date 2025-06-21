@@ -1,0 +1,109 @@
+yarn run v1.22.22
+$ next dev
+  ▲ Next.js 14.2.28
+  - Local:        http://localhost:3000
+  - Environments: .env
+  - Experiments (use with caution):
+    · outputFileTracingRoot
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling /purchase-orders/new ...
+ ✓ Compiled /purchase-orders/new in 5.3s (1265 modules)
+ GET /purchase-orders/new 200 in 5828ms
+ ✓ Compiled in 613ms (635 modules)
+ ○ Compiling /api/products ...
+ ✓ Compiled /api/products in 2.4s (654 modules)
+ ✓ Compiled (656 modules)
+ GET /api/products 200 in 2741ms
+ GET /api/suppliers 200 in 2747ms
+ GET /api/products 200 in 19ms
+ GET /api/suppliers 200 in 18ms
+ ✓ Compiled /api/purchase-orders/pdf in 166ms (662 modules)
+ POST /api/purchase-orders/pdf 200 in 214ms
+ ○ Compiling / ...
+ ✓ Compiled / in 667ms (1308 modules)
+ GET / 200 in 832ms
+ GET / 200 in 634ms
+ GET / 200 in 31ms
+ ✓ Compiled /api/dashboard in 143ms (686 modules)
+ GET /api/dashboard 200 in 318ms
+ GET /api/dashboard 200 in 17ms
+ GET /api/dashboard 200 in 17ms
+ GET /api/dashboard 200 in 16ms
+ GET / 200 in 64ms
+ GET /api/dashboard 200 in 16ms
+ GET /api/dashboard 200 in 15ms
+ GET / 200 in 43ms
+ GET /api/dashboard 200 in 21ms
+ GET /api/dashboard 200 in 17ms
+ ✓ Compiled /_not-found in 396ms (1342 modules)
+ GET /suppliers 404 in 54ms
+ GET / 200 in 55ms
+ GET /api/dashboard 200 in 118ms
+ GET /api/dashboard 200 in 18ms
+ GET /products 404 in 18ms
+ GET / 200 in 34ms
+ GET /api/dashboard 200 in 18ms
+ GET /api/dashboard 200 in 17ms
+ ✓ Compiled /api/products in 160ms (689 modules)
+ ✓ Compiled (691 modules)
+ GET /api/products 200 in 402ms
+ GET /api/suppliers 200 in 430ms
+ GET /api/products 200 in 15ms
+ GET /api/suppliers 200 in 14ms
+ ✓ Compiled /api/purchase-orders in 230ms (686 modules)
+ POST /api/purchase-orders 201 in 361ms
+ ✓ Compiled /api/dashboard in 159ms (688 modules)
+ GET /api/dashboard 200 in 286ms
+ GET /api/dashboard 200 in 17ms
+ GET / 200 in 87ms
+ GET /api/dashboard 200 in 19ms
+ GET /api/dashboard 200 in 21ms
+ GET / 200 in 34ms
+ GET / 200 in 29ms
+ GET / 200 in 28ms
+ GET /api/dashboard 200 in 22ms
+ GET /api/dashboard 200 in 19ms
+ GET / 200 in 33ms
+ GET / 200 in 30ms
+ GET / 200 in 28ms
+ GET / 200 in 28ms
+ GET / 200 in 27ms
+ GET / 200 in 29ms
+ GET /api/dashboard 200 in 20ms
+ GET /api/dashboard 200 in 18ms
+ GET / 200 in 32ms
+ GET / 200 in 28ms
+ GET / 200 in 28ms
+ GET / 200 in 29ms
+ GET / 200 in 26ms
+ GET / 200 in 27ms
+ GET / 200 in 26ms
+ GET /api/dashboard 200 in 43ms
+ GET /api/dashboard 200 in 21ms
+ ✓ Compiled in 562ms (1308 modules)
+ ✓ Compiled in 301ms (1308 modules)
+ ✓ Compiled in 1148ms (1320 modules)
+ ✓ Compiled in 258ms (665 modules)
+ ✓ Compiled in 671ms (1320 modules)
+ ✓ Compiled in 880ms (1320 modules)
+ ✓ Compiled in 881ms (1320 modules)
+ ✓ Compiled in 853ms (1320 modules)
+ ✓ Compiled in 883ms (1320 modules)
+ ✓ Compiled in 476ms (1320 modules)
+ ✓ Compiled /api/dashboard in 231ms (686 modules)
+ ✓ Compiled (688 modules)
+ GET /api/inventory/low-stock 500 in 562ms
+ GET /api/dashboard 200 in 547ms
+ GET /api/inventory/low-stock 500 in 26ms
+ GET /api/dashboard 200 in 27ms
+ ✓ Compiled in 601ms (1363 modules)
+ ✓ Compiled in 507ms (1365 modules)
+ ✓ Compiled in 438ms (1365 modules)
+ ✓ Compiled in 236ms (671 modules)
+ ✓ Compiled in 328ms (671 modules)
+ ✓ Compiled in 410ms (671 modules)
+ ✓ Compiled /api/seed in 266ms (695 modules)
+ POST /api/seed 200 in 429ms
+[?25h
