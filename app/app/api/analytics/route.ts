@@ -1,17 +1,21 @@
 
 export const dynamic = "force-dynamic";
 
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    // Determine range from query params
+    const range = req.nextUrl.searchParams.get('range') || '12months';
+    const months = range === '3months' ? 3 : range === '6months' ? 6 : 12;
+
     // Get current date for calculations
     const now = new Date();
     const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-    const oneYearAgo = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
+    const rangeStart = new Date(now.getTime() - months * 30 * 24 * 60 * 60 * 1000);
 
     // Basic stats
     const [totalOrders, totalValue] = await Promise.all([
@@ -42,12 +46,12 @@ export async function GET() {
       }
     });
 
-    // Monthly order trend (last 12 months)
+    // Monthly order trend for selected range
     const monthlyOrders = await prisma.purchaseOrder.groupBy({
       by: ['orderDate'],
       where: {
         orderDate: {
-          gte: oneYearAgo
+          gte: rangeStart
         }
       },
       _count: { id: true },
@@ -55,7 +59,7 @@ export async function GET() {
     });
 
     // Process monthly data
-    const monthlyOrderTrend = Array.from({ length: 12 }, (_, i) => {
+    const monthlyOrderTrend = Array.from({ length: months }, (_, i) => {
       const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
       const monthData = monthlyOrders.filter(order => {
         const orderDate = new Date(order.orderDate);

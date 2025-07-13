@@ -42,7 +42,7 @@ export default function AnalyticsPage() {
   const fetchAnalytics = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/analytics');
+      const response = await fetch(`/api/analytics?range=${timeRange}`);
       if (response.ok) {
         const data = await response.json();
         setAnalytics(data);
